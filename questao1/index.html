@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Inscrição</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom,#3c7c88,#5cb4c4);
+            height: 100vh;
+            margin: 0;
+            border: 0;
+        }
+
+        form {
+            margin-top: 100px;
+            max-width: 500px;
+           margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #3c7c88;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #3c7c88;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            font-family:"Arial";
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #3c7c88;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5cb4c4;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+
+        label {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label span {
+            margin-left: 10px;
+        }
+
+        label.checkmark {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            background-color: #fff;
+            border: 2px solid #24cbd3;
+            border-radius: 4px;
+        }
+
+        label.checkmark::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid #24cbd3;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        input[type="checkbox"]:checked ~ label.checkmark::after {
+            display: block;
+        }
+
+        button[type="submit"] {
+            background-color: #24cbd3;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <h1>Formulário de Inscrição</h1>
+
+    <label for="nome">Nome completo*</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail*</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="senha">Senha*</label>
+    <input type="password" id="senha" name="senha" required>
+
+    <label for="confirmar-senha">Confirmação de senha*</label>
+    <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+
+    <label for="data-nascimento">Data de nascimento*</label>
+    <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+    <label for="brasileiro">Brasileiro (Sim/Não)*</label>
+    <select id="brasileiro" name="brasileiro" required>
+        <option value="">Selecione</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+
+    <label for="termos" style="display: inline-block; vertical-align: middle;">Aceite os termos e condições*</label>
+        <input type="checkbox" id="termos" name="termos" required>
+
+        <label for="termos" class="checkmark"></label>
+    </label>
+    <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>
